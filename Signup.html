@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+         body{
+    background-image: url(15.jpg);
+    background-repeat:inherit;
+    background-size: cover;
+    width:100%;
+}
+* {box-sizing: border-box}
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+button:hover {
+  opacity:1;
+}
+.container {
+  padding: 16px;
+}
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+.content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  width: 40%; 
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.signupbtn {
+    float: left;
+    width: 50%;
+   
+  }
+
+        </style>
+    
+    </head>
+<body>
+  
+  <form class="content" action="signup.php" method="post" >
+    <div class="container">
+      <h1>Create An Account</h1>
+      <b><p>Please fill in this form to create an account.</p></b>
+      <hr>
+      <label for="text"><b>First Name</b></label>
+      <input type="text" placeholder="Enter your first name" name="fname" required>
+      <label for="text"><b>Second Name</b></label>
+      <input type="text" placeholder="Enter your second name" name="lname" required>
+      <label for="date"><b>Date Of Birth</b></label>
+      <input type="date" placeholder="Enter Email" name="date" required>
+      <br/>
+      <br/>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      
+      <label for="ID"><b>ID Number</b></label>
+      <input type="text" placeholder="Enter Your Id Number" name="id" required>
+      <br/>
+      <label for="Phone"><b>Phone Number</b></label>
+      <input type="text" placeholder="Enter Your Phone Number" name="phone" required>
+      
+      <br/>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="pswd" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+      
+        <button type="submit" class="signup" name="submit">Sign Up</button>
+      
+    </div>
+  </form>
+</div>
+</body>
+</html>

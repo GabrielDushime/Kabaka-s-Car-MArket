@@ -1,0 +1,359 @@
+
+ <!DOCTYPE html>
+ <html>
+     <head>
+        <script> 
+        
+            function validateForm()                                    
+{ 
+    var name = document.forms["myForm"]["name"];               
+    var email = document.forms["myForm"]["email"];    
+    var message = document.forms["myForm"]["message"];   
+   
+    if (name.value == "")                                  
+    { 
+        document.getElementById('errorname').innerHTML="Please enter a valid name";  
+        name.focus(); 
+        return false; 
+    }else{
+        document.getElementById('errorname').innerHTML="";  
+    }
+       
+    if (email.value == "")                                   
+    { 
+        document.getElementById('erroremail').innerHTML="Please enter a valid email address"; 
+        email.focus(); 
+        return false; 
+    }else{
+        document.getElementById('erroremail').innerHTML="";  
+    }
+   
+    if (email.value.indexOf("@", 0) < 0)                 
+    { 
+        document.getElementById('erroremail').innerHTML="Please enter a valid email address"; 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf(".", 0) < 0)                 
+    { 
+        document.getElementById('erroremail').innerHTML="Please enter a valid email address"; 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (message.value == "")                           
+    {
+        document.getElementById('errormsg').innerHTML="Please enter a valid message"; 
+        message.focus(); 
+        return false; 
+    }else{
+        document.getElementById('errormsg').innerHTML="";  
+    }
+   
+    return true; 
+}
+
+         </script> 
+         <style>
+            
+            h1{
+  text-align: center;
+}
+.form-style {
+  margin:10px auto;
+  width: 400px;
+  padding: 20px 12px 10px 20px;
+  font: 14px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style td {
+  padding: 0;
+  display: block;
+  list-style: none;
+  margin: 10px 0 0 0;
+}
+.form-style label{
+  margin:0 0 3px 0;
+  padding:0px;
+  display:block;
+  font-weight: bold;
+}
+.form-style .required{
+  color:red;
+}
+.form-style input[type=submit], .form-style input[type=reset]{
+  background: #4eb5f1;
+  padding: 8px 15px 8px 15px;
+  border: none;
+  color: #fff;
+}
+.form-style input[type=submit]:hover, .form-style input[type=reset]:hover{
+  background: #4eb5f1;
+  box-shadow:none;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+}
+.form-style .field-textarea{
+  height: 100px;
+}
+.form-style input[type=text], 
+.form-style input[type=email],
+textarea{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border:1px solid #BEBEBE;
+  padding: 7px;
+  margin:0px;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;  
+}
+.form-style .long{
+  width: 100%;
+}
+.form-style input[type=text]:focus, 
+.form-style input[type=email]:focus,
+.form-style textarea:focus{
+  -moz-box-shadow: 0 0 8px #88D5E9;
+  -webkit-box-shadow: 0 0 8px #88D5E9;
+  box-shadow: 0 0 8px #88D5E9;
+  border: 1px solid #88D5E9;
+}
+.error{
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+         </style>
+         <title>Kabaka Car's MArket Home</title>
+         <style>
+            
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    width:100%;
+     background-image: url(1.jpg);
+     background-repeat: no-repeat;
+      background-size: cover;
+}
+.header {
+    width: 100%;
+    position:fixed;
+    background-color: rgb(11, 29, 29);
+    height: 3%;
+    color:whitesmoke;
+    text-align: center;  
+    padding:20px;
+    top:0px;
+}
+
+.header ul li{
+    display: inline-block;
+    padding-right: 25px;
+    padding-left: 25px;;
+    font-size: 30px;
+    float: left;
+
+}
+.header ul li a{
+    text-decoration: none;
+    color:whitesmoke;
+}
+.header ul li a:hover{
+    color: darkslategray
+}
+.login{
+    float:right;
+    padding-right: 50px;
+    margin-top:0px;
+}
+.login button{
+padding:6px;
+font-size:20px;
+background-color: whitesmoke;
+border:none;
+border-radius: 20px;;
+}
+.login button a{
+    text-decoration: none;
+    color:darkgreen;
+}
+.login button:hover{
+    background-color: black;
+}
+.login button a:hover{
+    color:rgb(205, 143, 63);
+}
+footer{
+    margin-top:800px;
+    width: 100%;
+    background-color: rgb(11, 29, 29);
+}
+.footer{
+    text-align: center;
+    padding:30px;
+
+}
+.box strong{
+    font-size: 22px;
+}
+.box {
+    display: inline-block;
+    padding-right:40px;
+    padding-left:40px;
+    color: rgb(110, 109, 109);
+    font-size: 18px; 
+
+}
+.b4 form{
+    text-align:left;
+}
+.b4 input{
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    background-color: transparent;
+}
+.b4 ::placeholder{
+    color:peru;
+}
+.b4 button{
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 17px;
+}
+.b4 button:hover{
+    color:rgb(205, 143, 63);
+    background-color: black;
+}
+.b3 span{
+    line-height: 41px;
+}
+.b2 span{
+    line-height: 41px;
+}.b1 span{
+    line-height: 41px;
+}
+.b2 a{
+    text-decoration: none;
+    color:white;
+}
+.b1 a{
+    color: rgb(110, 109, 109);
+    text-decoration: none;
+    color: white;
+}
+
+
+         </style>
+     </head>
+     <body>
+         <div class="header">
+             <ul>
+                 <li><a href="Home.html">Home</a></li>
+                 <li><a href="Services.html">Services</a></li>
+                 <li><a href="Contact.html">Contact Us</a></li>
+                 <li><a href="About.html">About us</a></li>
+                 <li><a href="Demand.html">Demand</a></li>
+                 <li><a href="gallery.html">Gallery</a></li>
+             </ul>
+             <div class="login">
+                 <button><a href="login.html">Login</a></button>
+               
+             </div>
+         </div>
+         <div class="content">
+            <h1>Contact form</h1>
+            <form name="myForm" action="contact.php" onsubmit="return validateForm()" method="post">
+               <table class="form-style">
+                  <tr>
+                     <td>
+                        <label>
+                           Your name <span class="required">*</span>
+                        </label>
+                     </td>
+                     <td>
+                        <input type="text" name="name" class="long"/>
+                        <span class="error" id="errorname"></span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label>
+                          Your email address <span class="required">*</span>
+                        </label>
+                     </td>
+                     <td>
+                        <input type="email" name="email" class="long"/>
+                        <span class="error" id="erroremail"></span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label>
+                           Message <span class="required">*</span>
+                        </label>
+                     </td>
+                     <td>
+                        <textarea name="message" class="long field-textarea"></textarea>
+                        <span class="error" id="errormsg"></span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td></td>
+                     <td>
+                        <input type="submit" value="Send" name="send">      
+                        <input type="reset" value="Reset"> 
+                     </td>
+                  </tr>
+               </table>
+            </form>
+ 
+         </div>
+         
+         <footer>
+            <div class="footer">
+                <div class="box b1">
+                    <strong>Main links</strong> <br> <br>
+                     <span><a href="About.html">About us</a></span> <br>
+                     <span><a href="Services.html">Services</a></span> <br>
+                     <span><a href="Contact.html">Contact us</a></span> <br>
+                     <span><a href="Demand.html">Demand</a></span> <br>
+                </div>
+ 
+             <div class="box b2">
+                 <strong>Our Partners</strong> <br> <br>
+                 <span>Toyota</span> <br>
+                 <span>Hyundai</span> <br>
+                 <span>Nissan</span> <br>
+                 <span>Range rover</span> <br>
+             </div>
+ 
+             <div class="box b3">
+                 <strong>Our branches</strong> <br> <br>
+                 <span>Nyarugenge </span> <br>
+                 <span>Kabuga</span> <br>
+                 <span>Remera</span> <br>
+                 <span>Nyamata</span> <br>
+             </div>
+ 
+             <div class="box b4">
+                 
+                 <form action="">
+                 <strong>Ask any thing hire!</strong> <br> <br>
+                 <input type="text"placeholder="Enter your Names..."> <br>
+                 <input type="text" placeholder="Enter your Email... "> <br>
+                 <textarea name="" id="" cols="25" rows="3"></textarea> <br>
+                 <button>Submit</button>
+             </form>
+             </div>
+ 
+         </div>
+         </footer>
+     </body>
+ </html>
